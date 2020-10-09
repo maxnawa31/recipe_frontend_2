@@ -1,0 +1,4 @@
+export const USER_SET_JWT = 'USER_SET_JWT';
+export const USER_SET_DETAILS = 'USER_SET_DETAILS';
+export const USER_SET_IS_FETCHING = 'USER_SET_IS_FETCHING';
+export const USER_LOGOUT = 'USER_LOGOUT';
