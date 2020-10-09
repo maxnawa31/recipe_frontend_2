@@ -2,9 +2,9 @@ import { createSelector } from 'reselect';
 
 export const userSelectJWT = ({
   user: {
-    details: { token }
+    jwt
   }
-}) => token;
+}) => jwt;
 
 export const userSelectIsLoggedIn = createSelector(userSelectJWT, token => {
   return Boolean(token);

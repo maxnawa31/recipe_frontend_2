@@ -5,7 +5,6 @@ import MainLogin from './Main';
 import { userSelectIsLoggedIn } from '../../selectors/user';
 
 export const Login = ({ theme, loggedIn, match }) => {
-  console.log("INSIDE")
   return loggedIn ? <Redirect to="/" /> : <MainLogin />;
 };
 
