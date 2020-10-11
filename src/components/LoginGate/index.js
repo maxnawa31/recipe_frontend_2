@@ -26,7 +26,7 @@ export class LoginGate extends Component {
 
         } else {
             console.log('redirect')
-            return <Redirect to={'/'} />
+            return <Redirect to='/login' />
         }
     }
 }
