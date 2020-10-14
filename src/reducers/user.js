@@ -1,8 +1,9 @@
-import * as types from '../types/user';
+import * as types from "../types/user";
 
 export const userInitialState = {
   details: {},
-  jwt: null
+  jwt: null,
+  recipes: [],
 };
 
 const userReducer = (state = userInitialState, action) => {
@@ -11,9 +12,13 @@ const userReducer = (state = userInitialState, action) => {
       const { details } = action;
       return { ...state, details };
     }
+    case types.USER_SET_RECIPES: {
+      const { recipes } = action;
+      return { ...state, recipes };
+    }
     case types.USER_SET_JWT: {
       const { jwt } = action;
-      return { ...state, jwt }
+      return { ...state, jwt };
     }
     default: {
       return state;

@@ -1,9 +1,17 @@
-import React, { Component } from 'react';
+import React, { useEffect } from "react";
+import { syncUserRecipes } from "../../actions/user";
+import { connect } from "react-redux";
 
-class Feed extends Component {
-    render() {
-        return <div>helllo</div>
-    }
-}
+const Feed = (props) => {
+  useEffect(() => {
+    console.log(props);
+    const { syncRecipes } = props;
+    syncRecipes();
+  });
+  return <div>hello</div>;
+};
 
-export default Feed
+const mapDispatchToProps = {
+  syncRecipes: syncUserRecipes,
+};
+export default connect(null, mapDispatchToProps)(Feed);

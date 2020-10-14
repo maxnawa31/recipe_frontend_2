@@ -5,6 +5,7 @@ import Homepage from './components/Homepage';
 import Feed from './components/Feed';
 import Login from './components/Login';
 import LoginGate from './components/LoginGate';
+import CreateRecipe from './components/CreateRecipe'
 
 const Routes = () => (
   <BrowserRouter>
@@ -12,7 +13,8 @@ const Routes = () => (
     <Switch>
       <Route path="/login" component={Homepage} />
       <LoginGate>
-        <Route path="/" component={Feed} />
+        <Route path="/feed" component={Feed} />
+        <Route path="/recipes/new" component={CreateRecipe} />
       </LoginGate>
     </Switch>
   </BrowserRouter>
